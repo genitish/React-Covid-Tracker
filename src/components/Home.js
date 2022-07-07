@@ -19,7 +19,8 @@ function Home() {
 
 
     const selectCountryHandler = (country) =>{
-            fetch(`https://corona.lmao.ninja/v2/countries/${country}`)
+            fetch(`https://corona.lmao.ninja/v2/countries/${country}`, {
+            mode: 'no-cors'})
             .then(response => response.json())
             .then(setSelectedCountry)
         }
